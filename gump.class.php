@@ -2103,7 +2103,7 @@ class GUMP
             return;
         }
 
-        if (!is_string($input[$field]) || !is_object(json_decode($input[$field]))) {
+        if (!is_string($input[$field]) || !json_decode($input[$field])) {
             return array(
           'field' => $field,
           'value' => $input[$field],
